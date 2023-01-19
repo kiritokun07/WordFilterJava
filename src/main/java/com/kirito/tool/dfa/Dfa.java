@@ -21,7 +21,7 @@ public class Dfa {
         this.root = root;
     }
 
-    public static Dfa NewDfa() {
+    public static Dfa newDfa() {
         return new Dfa(DfaNode.NewDfaNode());
     }
 
@@ -30,7 +30,7 @@ public class Dfa {
         for (SensitiveWords word : words) {
             this.add(word.getWord(), word.getRank());
         }
-        log.info("load Word:{}sec:{}", words.size(), System.currentTimeMillis() / 1000 - now);
+        log.info("dfa load Word:{}sec:{}", words.size(), System.currentTimeMillis() / 1000 - now);
     }
 
     public void add(String word, int rank) {
